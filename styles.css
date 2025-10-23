@@ -1,0 +1,114 @@
+body{
+    background-color: #d9d9d9;
+}
+
+button{
+    background-color: rgb(201, 38, 38);
+    border: none;
+    border-radius: 7px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin: 0px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+div.container{
+    padding: 215px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: grid;
+    column-gap: 3px; 
+    grid-template-columns: auto;
+    grid-template-areas:
+        "text text"
+        "form button"
+        "result result";
+}
+
+/*div.container > div{
+    border: 3px solid black;
+}*/
+
+div.container > div.text{
+    grid-area: text;
+}
+
+div.container > div.form{
+    grid-area: form;
+}
+
+div.container > div.button{
+    grid-area: button;
+}
+
+div.container > div.result{
+    grid-area: result;
+}
+
+h1{
+    color: white;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin: 0px;
+    font-size: 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    /*Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
+}
+
+h2{
+    color: olive;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 27px;
+}
+
+h3, p.superhero{
+    padding-top: 20px;
+}
+
+h3, h4{
+    margin: 0px;
+    text-transform: uppercase;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header{
+    background-color: olive;
+}
+
+hr{
+    margin: 0px;
+    width: 110%;
+}
+
+input{
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 800px;
+    border-radius: 7px;
+    padding: 17px;
+    margin: 0px;
+    font-size: 17px;
+    float: right;
+}
+
+p.superhero{
+    color: rgb(201, 38, 38);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px;
+}
+
+p.superhero, p.search{
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

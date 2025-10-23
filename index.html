@@ -9,8 +9,37 @@
         <script src="app.js"></script>
     </head>
 
-    <body>
+    <header align = "center">
         <h1>Avengers Character Search</h1>
-        <button class = "btn">Search</button>
+    </header>
+
+    <body>
+        <div class="container">
+            <div class = "text">
+                <p class = "search">Search by full name or alias</p>
+            </div>
+
+            <div class = "form">
+                <form>
+                    <input type="text" id = "sName" name="sName" placeholder="Example: Captain America or Steve Rogers"></input>
+                </form>
+            </div>
+
+            <div class = "btn">
+                <button class = "btn">Search</button>
+            </div>
+
+            <div class = "response">
+                <h2>
+                    RESULT
+                </h2>
+
+                <hr>
+
+                <div id = "result">
+                    
+                </div>
+            </div>
+        </div>
     </body>
 </html>

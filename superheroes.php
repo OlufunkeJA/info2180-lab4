@@ -65,8 +65,36 @@ $superheroes = [
 
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+<?php
+//Get query param from the URL
+$query = $_REQUEST["query"];
+
+//Tracks whether query was found
+$status = false;
+
+if ($query == ""): ?>
+    <ul>
+    <?php foreach ($superheroes as $superhero): ?>
+    <li><?= $superhero['alias']; ?></li>
+    <?php endforeach; ?>
+    </ul>
+<?php 
+elseif ($status == false):
+    foreach($superheroes as $superhero):
+        if ($superhero["alias"] == $query or $superhero["name"] == $query):?>
+            <h3><?= $superhero["alias"]; ?></h3>
+            <h4><?= "A.K.A " . $superhero["name"]; ?></h4>
+            <p><?= $superhero["biography"]; ?></p>
+        <?php 
+            $status = true;?>
+        <?php
+        endif;  
+    endforeach;
+
+    //If status is still false, the entry wasn't found
+    if ($status == false):?>
+    <p class = "superhero"><?= "Superhero not found"; ?></p>
+    <?php
+    endif;
+endif;
+?>
