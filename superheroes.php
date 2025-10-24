@@ -67,7 +67,7 @@ $superheroes = [
 
 <?php
 //Get query param from the URL
-$query = $_REQUEST["query"];
+$query = filter_var($_REQUEST["query"],FILTER_SANITIZE_STRING);
 
 //Tracks whether query was found
 $status = false;
